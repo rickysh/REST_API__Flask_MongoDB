@@ -17,8 +17,17 @@
 
 For example:
 
-GET:  
+GET (all users):  
 `curl http://<server>:5000/users`
 
+GET (one user):
+`curl http://<server>:5000/users/<user_id>`
+
 DELETE:  
-`curl -X DELETE http://<server>/users/<user_id>`
+`curl -X DELETE http://<server>:5000/users/<user_id>`
+
+POST (note: `application/json` format recommended):
+`curl -d '{"name": "<name>", "age": <age>, "email": "<email>"}' -H 'Content-Type: application/json' -X POST http://<server>:5000/users`
+
+PUT:
+`curl -d '{"name": "<name>", "age": <age>, "email": "<email>"}' -H 'Content-Type: application/json' -X PUT http://<server>:5000/users/<user_id>`

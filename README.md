@@ -20,14 +20,14 @@ For example:
 GET (all users):  
 `curl http://<server>:5000/users`
 
-GET (one user):
+GET (one user):  
 `curl http://<server>:5000/users/<user_id>`
 
 DELETE:  
 `curl -X DELETE http://<server>:5000/users/<user_id>`
 
-POST (note: `application/json` format recommended):
+POST (note: `application/json` format recommended):  
 `curl -d '{"name": "<name>", "age": <age>, "email": "<email>"}' -H 'Content-Type: application/json' -X POST http://<server>:5000/users`
 
-PUT:
+PUT:  
 `curl -d '{"name": "<name>", "age": <age>, "email": "<email>"}' -H 'Content-Type: application/json' -X PUT http://<server>:5000/users/<user_id>`
